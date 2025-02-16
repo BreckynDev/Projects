@@ -13,7 +13,7 @@ class book:
         self.rating = rating
 
     def __str__(self):
-        return f"{self.title}\nby {self.author}, published in {self.year_published}\nRating: {self.rating}\n{self.description}\n"
+        return f"{self.title}\nby {self.author}, published in {self.year_published}\nRating: {self.rating}\n\n{self.description}\n"
     
                         #Program Fucntions
 #-----------------------------------------------------------------
@@ -34,36 +34,25 @@ def menu():
 def random_int():
     return random.randint(0, 3)
 
+def text_files(genre, file_name):
+    with open(f"Python/Book_Recommendation/Books/{genre}/{file_name}", 'r') as file:
+        file_contents = file.read()
+    return file_contents
                         #Book genres Functions
 #-----------------------------------------------------------------
 #Mystery Genre
 def mystery():
     mystery_books = []
-    novel_one = book("Gone Girl", "Gillian Flynn", 2012, """
-A twisted and dark look at a marriage gone wrong, 
-with unexpected twists and psychological manipulation.""", "9.8/10" )
+    novel_one = book("Gone Girl", "Gillian Flynn", 2012, text_files("Mystery", "GoneGirl.txt"), "9.8/10" )
     mystery_books.append(novel_one)
 
-    novel_two = book("House of Leaves", "Mark Z. Danielewski", 2000, """
-A mind-bending, multi-layered novel that mixes 
-mystery with experimental narrative techniques. 
-The story revolves around a family that discovers 
-their house is bigger on the inside, leading to a 
-complex and haunting exploration of reality.""", "9.1/10")
+    novel_two = book("House of Leaves", "Mark Z. Danielewski", 2000, text_files("Mystery", "HouseOfLeaves.txt"), "9.1/10")
     mystery_books.append(novel_two)
 
-    novel_three = book("The Paper Palace", "Miranda Cowley Heller", 2021, """
-A mystery that revolves around family secrets, a murder,
-and a summer vacation house that holds memories of betrayal.
-A gripping exploration of guilt, trauma, and unspoken truths.""", "8/10")
+    novel_three = book("The Paper Palace", "Miranda Cowley Heller", 2021, text_files("Mystery", "ThePaperPalace.txt"), "8/10")
     mystery_books.append(novel_three)
 
-    novel_four = book("The Girl on the Train", "Paula Hawkins", 2015, """
-A massively popular psychological thriller, this book 
-follows a woman who becomes involved in a missing-person 
-investigation after witnessing something suspicious from 
-the window of a train. It's full of unreliable narrators 
-and plot twists.""", "7.5/10")
+    novel_four = book("The Girl on the Train", "Paula Hawkins", 2015, text_files("Mystery", "TheGirlOnTheTrain.txt"), "7.5/10")
     mystery_books.append(novel_four)
 
     #Random Book picker
@@ -74,36 +63,16 @@ and plot twists.""", "7.5/10")
 #Fantasy Genre
 def fantasy():
     fantasy_books = []
-    novel_one = book("The Hobbit", "J.R.R. Tolkien", 1937, """
-A beloved classic that follows Bilbo Baggins on a magical 
-adventure to reclaim treasure guarded by the fearsome dragon 
-Smaug. It's a lighter, more accessible entry to Tolkien's world
-of Middle-earth.""", "8.3/10" )
+    novel_one = book("The Hobbit", "J.R.R. Tolkien", 1937, text_files("Fantasy", "TheHobbit.txt"), "8.3/10" )
     fantasy_books.append(novel_one)
 
-    novel_two = book("The Way of Kings", "Brandon Sanderson", 2010, """
-In The Way of Kings, the first book in The Stormlight 
-Archive, Kaladin, a soldier turned slave, discovers 
-his magical powers amid a world torn by war and political 
-intrigue. The novel explores themes of leadership, honor, 
-and destiny as characters confront personal and 
-world-shaping challenges.""", "9.5/10")
+    novel_two = book("The Way of Kings", "Brandon Sanderson", 2010, text_files("Fantasy", "TheWayOfKings.txt"), "9.5/10")
     fantasy_books.append(novel_two)
 
-    novel_three = book("A Song of Ice and Fire", "George R.R. Martin", 1996, """
-The books behind Game of Thrones, full of complex
-characters, political intrigue, and epic battles. 
-A grimdark take on medieval fantasy, where power, 
-betrayal, and shifting allegiances rule.""", "9/10" )
+    novel_three = book("A Song of Ice and Fire", "George R.R. Martin", 1996, text_files("Fantasy", "ASongOfIceAndFire.txt"), "9/10" )
     fantasy_books.append(novel_three)
 
-    novel_four = book("Between Two Fires", "Christopher Buehlman", 2019, """
-Set during the Black Death in 14th-century France, 
-Between Two Fires follows a knight named Thomas and 
-a young girl named Isolde as they navigate a world 
-ravaged by plague. They become caught in a battle 
-between Heaven and Hell, with Thomas's past sins 
-and moral struggles at the heart of the story.""", "7.2/10")
+    novel_four = book("Between Two Fires", "Christopher Buehlman", 2019, text_files("Fantasy", "BetweenTwoFires.txt"), "7.2/10")
     fantasy_books.append(novel_four)
 
     #Random Book picker

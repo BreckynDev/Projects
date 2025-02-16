@@ -1,0 +1,1 @@
+This repository is a collection of simple yet fun coding projects that I’ve created over time. These projects are designed to showcase my growing skills and experimentation with different programming concepts. While the projects may be small, each one helped me learn something new and gave me the opportunity to put my knowledge into practice.
