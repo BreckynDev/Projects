@@ -191,30 +191,16 @@ def adventure():
 #Dystopian Genre
 def dystopian():
     dystopian_books = []
-    novel_one = book("The Handmaid's Tale", "Margaret Atwood", 1985, """
-In a dystopian future, women have been stripped of their rights and forced 
-into servitude. The Handmaid's Tale is a powerful critique of patriarchy, 
-reproductive rights, and the dangers of a theocratic state.""", "8.9/10" )
+    novel_one = book("The Handmaid's Tale", "Margaret Atwood", 1985, text_files("Dystopian", "TheHandmaidTale.txt"), "8.9/10" )
     dystopian_books.append(novel_one)
 
-    novel_two = book("1984", "George Orwell", 1962, """
-A chilling portrayal of a totalitarian regime that uses surveillance, 
-mind control, and language manipulation to maintain power. 
-1984 explores themes of freedom, oppression, and the consequences 
-of absolute control.""", "9.5/10")
+    novel_two = book("1984", "George Orwell", 1962, text_files("Dystopian", "1984.txt"), "9.5/10")
     dystopian_books.append(novel_two)
 
-    novel_three = book("The Giver", "Lois Lowry", 1993, """
-In a world where emotions, choices, and memories are suppressed for the 
-greater good, Jonas is selected to inherit the role of "Receiver" of 
-memories. The book explores the consequences of a perfectly controlled 
-society.""", "8/10" )
+    novel_three = book("The Giver", "Lois Lowry", 1993, text_files("Dystopian", "TheGiver.txt"), "8/10" )
     dystopian_books.append(novel_three)
 
-    novel_four = book("The Man in the High Castle", "Philip K. Dick", 1962, """
-In an alternate history where the Axis powers won World War II, the U.S. 
-is divided between Japan and Nazi Germany. This mind-bending novel explores 
-alternate realities, authoritarian regimes, and the nature of reality itself.""", "8.2/10")
+    novel_four = book("The Man in the High Castle", "Philip K. Dick", 1962, text_files("Dystopian", "TheManInTheHighCastle.txt"), "8.2/10")
     dystopian_books.append(novel_four)
 
     #Random Book picker
