@@ -151,6 +151,8 @@ int main()
         cout << "Would you like to read another bank record (y/n): ";
         cin >> moreBankRecord;
 
+        cout << "\n";
+
     } while (moreBankRecord == 'y' || moreBankRecord == 'Y' );
     
     return 0;
